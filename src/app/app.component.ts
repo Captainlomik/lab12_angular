@@ -10,7 +10,7 @@ import { identifierModuleUrl } from '@angular/compiler';
 export class AppComponent implements OnInit, OnDestroy {
   title = 'Компоненты';
   persons: Person[] = [];
-
+  search = '';
   constructor() {
   }
 
@@ -20,6 +20,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.persons.push(new Person('Ivan', 'Ivanov', 3));
     this.persons.push(new Person('Ivan', 'Ivanov', 4));
     this.persons.push(new Person('Ivan', 'Ivanov', 5));
+    console.log(this.persons[1].firstname);
   }
 
   ngOnDestroy(): void {
@@ -29,6 +30,7 @@ export class AppComponent implements OnInit, OnDestroy {
     let newId = this.persons[this.persons.length - 1].id + 1;
     person.id = newId;
     this.persons.push(person);
+
   }
 
   delete(index: number) {
@@ -40,15 +42,15 @@ export class AppComponent implements OnInit, OnDestroy {
     console.log(event);
   }
 
-  change(peron:Person)
-  {
- 
-   console.log(peron.firstname);
+  change(peron: Person) {
+    console.log(peron);
+    let index = this.persons.indexOf(peron);
+    this.persons[index] = peron;
 
   }
- /* change(newPerson:Person)
-  {
-    newPerson.id=newPerson.id;
-    this.persons.push(newPerson);
-  }*/
+  /* change(newPerson:Person)
+   {
+     newPerson.id=newPerson.id;
+     this.persons.push(newPerson);
+   }*/
 }

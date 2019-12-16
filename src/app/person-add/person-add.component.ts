@@ -8,10 +8,12 @@ import { Person } from '../shared/models/person.model';
   styleUrls: ['./person-add.component.css']
 })
 export class PersonAddComponent implements OnInit {
+  
   @Output() addperson = new EventEmitter<Person>();
 
   input1: string = '';
   input2: string = '';
+  search:string='';
 
   constructor() { }
 

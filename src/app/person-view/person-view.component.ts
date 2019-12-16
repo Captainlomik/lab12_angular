@@ -9,26 +9,26 @@ import { Person } from '../shared/models/person.model';
 export class PersonViewComponent implements OnInit {
   @Input() inPerson: Person;
   @Output() del = new EventEmitter<null>();
-  @Output() ch = new EventEmitter<{id:number, name:string, surname:string}>();
-
+  @Output() ch = new EventEmitter<Person>();
+  editMode = false;
   constructor() { }
 
   ngOnInit() {
-    // console.log(this.inPerson)
+    console.log(this.inPerson)
   }
 
   delete() {
     this.del.emit();
   }
-  change(id:number, name:string, surname:string) { 
-    let i='firstname'+id;
-   let newP=document.getElementById(i);
-   newP.innerHTML=`<input [(ngModule)]="name">`;
-
-
-  
+  change(id: number, name: string, surname: string) {
+    // let i = 'firstname' + id;
+    // let newP = document.getElementById(i);
+    // newP.innerHTML = `<input ?????????>`;
   }
-
+onSave() {
+  this.ch.emit(this.inPerson);
+  this.editMode=false;
+}
 
 
 }

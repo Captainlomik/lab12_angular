@@ -7,6 +7,7 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { PersonViewComponent } from './person-view/person-view.component';
 import { PersonAddComponent } from './person-add/person-add.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PersonAddComponent } from './person-add/person-add.component';
     FirstComponent,
     SecondComponent,
     PersonViewComponent,
-    PersonAddComponent
+    PersonAddComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule, 

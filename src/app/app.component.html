@@ -3,9 +3,13 @@
     <h2>{{title}}</h2>
   </div>
 </div>
+<div class="col-12 mt-5">
+  <input type="text" class="form-control" placeholder="Поиск" [(ngModel)]="search">
+</div>
 <!-- <app-first></app-first>
 <app-second></app-second> -->
-<app-person-view [inPerson]="person" *ngFor="let person of persons; let pindex = index; " (del)="delete(pindex)" (ch)="change($event)">
+<app-person-view [inPerson]="person" *ngFor="let person of persons | filter:search; let pindex = index; "
+  (del)="delete(pindex)" (ch)="change($event)">
 </app-person-view>
 <hr>
 <app-person-add (addperson)="onAddPerson($event)"></app-person-add>
