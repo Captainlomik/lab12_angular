@@ -17,11 +17,11 @@
       <div class="col-2" id="id{{inPerson.id}}">{{inPerson.id}}</div>
           <div class="col-2"><input type="text" [(ngModel)]="inPerson.firstname"></div>
           <div class="col-2"><input type="text" [(ngModel)]="inPerson.lastname"></div>
-         <div class="col-2"><input type="text" [(ngModel)]="inPerson.phone"></div>
+         <div class="col-2"><input type="text"  [(ngModel)]="inPerson.phone"></div>
           <button class=" btn btn-light ml-5"
             (click)="editMode=!editMode">
             Change</button>
-          <button class=" btn btn-light"
+          <button class=" btn btn-light ml-2"
             (click)="onSave()">
             Save</button>
           <button type="button" (click)="delete()"  class="btn btn-danger ml-3">Del</button>

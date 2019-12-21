@@ -15,12 +15,12 @@ export class PersonAddComponent implements OnInit {
   input1: string = '';
   input2: string = '';
   search:string='';
-
+public mask = ['+', '7', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/];
   constructor() { 
     this.myForm= new FormGroup({
-      "firstname": new FormControl("lol", Validators.required),
-      "lastname": new FormControl("kek", Validators.required ),
-      "phone": new FormControl("9483827434", Validators.pattern("[0-9]{10}")) 
+      "firstname": new FormControl("", Validators.required),
+      "lastname": new FormControl("", Validators.required ),
+      "phone": new FormControl("", Validators.pattern(/^((\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/)) 
     });
   }
 

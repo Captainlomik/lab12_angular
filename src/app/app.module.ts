@@ -10,6 +10,7 @@ import { PersonAddComponent } from './person-add/person-add.component';
 import { FilterPipe } from './pipes/filter.pipe';
 
 import { ReactiveFormsModule }   from '@angular/forms';
+import { TextMaskModule } from 'angular2-text-mask';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,11 @@ import { ReactiveFormsModule }   from '@angular/forms';
   imports: [
     BrowserModule, 
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TextMaskModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class MyModule {}

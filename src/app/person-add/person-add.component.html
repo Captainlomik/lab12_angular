@@ -2,13 +2,13 @@
     <div class="row">
     <form [formGroup]="myForm" novalidate (ngSubmit)="onAddPerson()">
         <div class="col-12 form-group">
-            <input type="text" class="form-control" placeholder="name" formControlName="firstname">
+            <input type="text" class="form-control" placeholder="name" required formControlName="firstname">
         </div>
         <div class="col-12 mt-2">
-            <input type="text" class="form-control" placeholder="surname"  formControlName="lastname" >
+            <input type="text" class="form-control" placeholder="surname" required formControlName="lastname" >
         </div>
         <div class="col-12 mt-2 form-group">
-            <input type="text" class="form-control" placeholder="phone" formControlName="phone" >
+            <input type="text" class="form-control" placeholder="phone" required [textMask]="{mask:mask}" formControlName="phone" >
             <div class="alert-danger"
             *ngIf="myForm.controls['phone'].invalid && myForm.controls['phone'].touched">
             Некорректный номер телефона
