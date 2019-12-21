@@ -15,12 +15,11 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.persons.push(new Person('Ivan', 'Ivanov', 1));
-    this.persons.push(new Person('Ivan', 'Ivanov', 2));
-    this.persons.push(new Person('Ivan', 'Ivanov', 3));
-    this.persons.push(new Person('Ivan', 'Ivanov', 4));
-    this.persons.push(new Person('Ivan', 'Ivanov', 5));
-    console.log(this.persons[1].firstname);
+    this.persons.push(new Person('Ivan', 'Ivanov', '898323728', 1));
+    this.persons.push(new Person('Ivan', 'Ivanov', '932346535', 2));
+    this.persons.push(new Person('Ivan', 'Ivanov', '324324235', 3));
+    this.persons.push(new Person('Ivan', 'Ivanov', '342345645', 4));
+    this.persons.push(new Person('Ivan', 'Ivanov', '435523455', 5));
   }
 
   ngOnDestroy(): void {
@@ -30,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
     let newId = this.persons[this.persons.length - 1].id + 1;
     person.id = newId;
     this.persons.push(person);
-
+    console.log(this.persons);
   }
 
   delete(index: number) {

@@ -9,6 +9,8 @@ import { PersonViewComponent } from './person-view/person-view.component';
 import { PersonAddComponent } from './person-add/person-add.component';
 import { FilterPipe } from './pipes/filter.pipe';
 
+import { ReactiveFormsModule }   from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { FilterPipe } from './pipes/filter.pipe';
   ],
   imports: [
     BrowserModule, 
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

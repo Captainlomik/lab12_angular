@@ -7,6 +7,7 @@ import { Person } from '../shared/models/person.model';
   styleUrls: ['./person-view.component.css']
 })
 export class PersonViewComponent implements OnInit {
+ 
   @Input() inPerson: Person;
   @Output() del = new EventEmitter<null>();
   @Output() ch = new EventEmitter<Person>();
@@ -29,6 +30,5 @@ onSave() {
   this.ch.emit(this.inPerson);
   this.editMode=false;
 }
-
 
 }
