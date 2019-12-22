@@ -1,0 +1,28 @@
+{
+  "person": [
+    {
+      "firstname": "Sam",
+      "lastname": "Bol",
+      "phone": "+7(928)832-23-24",
+      "id": 2
+    },
+    {
+      "firstname": "lolik",
+      "lastname": "bolik",
+      "phone": "+7(987) 678-75-67",
+      "id": 4
+    },
+    {
+      "firstname": "kik",
+      "lastname": "kjhkh",
+      "phone": "+7(987) 675-45-65",
+      "id": 5
+    },
+    {
+      "firstname": "Иван",
+      "lastname": "Иванов",
+      "phone": "+7(757) 654-67-89",
+      "id": 8
+    }
+  ]
+}

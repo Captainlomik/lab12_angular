@@ -30,8 +30,7 @@ public mask = ['+', '7', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '
   onAddPerson() {
     //let person = new Person(firstname, lastname, phone);
     //this.addperson.emit(person);
-    console.log(this.myForm.value);
-    this.addperson.emit(this.myForm.value)
+    this.addperson.emit(this.myForm.value);
   }
 
 

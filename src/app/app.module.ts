@@ -11,6 +11,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 
 import { ReactiveFormsModule }   from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { TextMaskModule } from 'angular2-text-mask';
     FormsModule,
     ReactiveFormsModule,
     TextMaskModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
